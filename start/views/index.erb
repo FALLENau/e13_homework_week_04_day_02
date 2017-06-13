@@ -1,0 +1,9 @@
+<h1>Hello I'm an Index</h1>
+
+
+<% @pizzas.each do |pizza|  %>
+  <p>PIZZAS!!!... names: <%= pizza.pretty_name() %></p>
+  <p>Order: <%=  pizza.quantity() %> x <%= pizza.topping() %></p>
+  <p><a href="/pizzas/<%= pizza.id %>">Show Order</a></p>
+  <hr>
+<% end %>
