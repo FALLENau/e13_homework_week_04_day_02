@@ -3,6 +3,8 @@ html {
   margin: 0;
 }
 body {
+  text-align: center;
+  object-position: center;
   padding: inherit;
   margin: inherit;
   font-family: monospace;
@@ -17,11 +19,12 @@ header {
 
 section {
   background-color: inherit;
-  width: 400px;
+  max-width: 50%;
 }
 
 aside {
   background-color: grey;
+    max-width: 50%;
 }
 /*blogflex goes here*/
 
@@ -46,6 +49,12 @@ nav ul li, footer ul li {
 
 ul#soacedOut li {
   margin-right: 20px;
+}
+/*Images*/
+
+img#staithsImg {
+   object-fit: scale-down;
+
 }
 
 /*links here*/
