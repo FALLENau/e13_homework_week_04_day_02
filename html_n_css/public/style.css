@@ -1,0 +1,65 @@
+html {
+  padding: 0;
+  margin: 0;
+}
+body {
+  padding: inherit;
+  margin: inherit;
+  font-family: monospace;
+  color: orange;
+  background-color: #333;
+}
+
+header {
+  padding:inherit;
+  margin: inherit;
+}
+
+section {
+  background-color: inherit;
+  width: 400px;
+}
+
+aside {
+  background-color: grey;
+}
+/*blogflex goes here*/
+
+div#blogflex {
+  display: flex;
+}
+
+/*nav here*/
+nav, footer {
+  text-align: center;
+}
+
+nav ul, footer ul {
+  padding: 0;
+  margin: 0 0 30px 0;
+  list-style-position: none;
+}
+
+nav ul li, footer ul li {
+  display: inline;
+}
+
+ul#soacedOut li {
+  margin-right: 20px;
+}
+
+/*links here*/
+
+a {
+  color: orange;
+  text-decoration: none;
+}
+
+a:hover {
+  color: red;
+}
+
+h3#reece {
+  text-decoration: underline;
+
+}
