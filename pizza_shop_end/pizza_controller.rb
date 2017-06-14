@@ -27,10 +27,24 @@ post "/pizzas" do
   erb(:create)
 end
 
-#EDIT
 
 # DELETE
 post "/pizzas/:id/delete" do
  pizza = Pizza.find(params["id"].to_i)
  pizza.delete()
+ redirect to("/pizzas")
 end #delete with redirect
+
+
+#EDIT
+get "/pizzas/:id/edit" do
+  @pizza =Pizza.find(params["id"].to_i)
+  erb(:edit)
+end
+
+# UPDATE
+post "/pizzas/:id" do
+  pizza =Pizza.new(params)
+  pizza.update()
+  redirect to("/pizzas/#{params["id"]}")
+end

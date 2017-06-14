@@ -3,6 +3,8 @@
 <p>Quantity: <%= @pizza.quantity() %></p>
 <p>Topping: <%= @pizza.topping() %></p>
 
+<a class="button" href="/pizzas/<%= @pizza.id %>/edit">Edit Order</a>
+
 <form method="post" action="/pizzas/<%= @pizza.id %>/delete">
   <input type="submit" name="" value="Delete Order">
 </form>

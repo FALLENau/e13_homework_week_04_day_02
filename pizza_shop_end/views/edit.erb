@@ -1,0 +1,39 @@
+<form method="post" action="/pizzas/<%= @pizza.id %>">
+  <label for="first-name">First Name:</label>
+  <input id="first-name" type="text" name="first_name" value="<%= @pizza.first_name() %>">
+
+  <label for="last-name">Last Name:</label>
+  <input id="last-name" type="text" name="last_name" value="<%= @pizza.last_name() %>">
+
+  <label for="pizza-select">Select a pizza!</label>
+  <select id="pizza-select" name="topping">
+    <option
+    value="Margherita"
+    <%= "selected" if @pizza.topping() == "Margherita" %>
+    >Margherita</option> <!-- Only use "ruby then select to add old info into form field" -->
+    <option value="Meat Tornado"
+    <%= "selected" if @pizza.topping() == "Meat Tornado" %>
+      >Meat Tornado</option>
+    <option
+    value="Neapolitan"
+    <%= "selected" if @pizza.topping() == "Neapolitan" %>
+    >Neapolitan</option>
+    <option
+    value="Chicago"
+    <%= "selected" if @pizza.topping() == "Chicago" %>
+    >Chicago</option>
+    <option
+    value="Peperoni"
+    <%= "selected" if @pizza.topping() == "Peperoni" %>
+    >Peperoni</option>
+    <option
+    value="Vegetariana"
+    <%= "selected" if @pizza.topping() == "Vegetariana" %>
+    >Vegetariana</option>
+  </select>
+
+  <label for="quantity">Quantity:</label>
+  <input id="quantity" type="number" name="quantity">
+
+  <input type="submit" value="Edit Order">
+</form>
