@@ -22,7 +22,10 @@ class Pizza
   end
 
   def save()
-    sql = "INSERT INTO pizzas ( first_name, last_name, topping, quantity ) VALUES ('#{ @first_name }','#{ @last_name }','#{ @topping }','#{ @quantity }') 
+    sql = "INSERT INTO pizzas (
+    first_name, last_name, topping, quantity
+    ) VALUES (
+    '#{ @first_name }','#{ @last_name }','#{ @topping }','#{ @quantity }')
       RETURNING *;"
     pizza_data = SqlRunner.run(sql)
     @id = pizza_data.first()['id'].to_i
